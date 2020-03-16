@@ -85,6 +85,17 @@ html {
   transition: all 400ms ease-in-out;
 }
 
+#menuToggle span:nth-child(4) {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background: #b1b0b0;
+  border-radius: 5px;
+  z-index: 1;
+  margin-bottom: 5px;
+  transition: all 400ms ease-in-out;
+}
+
 .open span:nth-child(2) {
   position: absolute;
   transform: rotateZ(40deg);
@@ -146,8 +157,8 @@ html {
 }
 .logo-wrapper {
   width: 100%;
-  position: static;
-
+  position: relative;
+  z-index: 9;
   text-align: center;
   margin: auto;
   padding-top: 10px;
@@ -171,7 +182,7 @@ html {
 .hero {
   position: relative;
   margin-top: -100px;
-  z-index: -1;
+  /* z-index: -1; */
   height: calc(90vh + 100px);
   width: 100%;
   background-image: url(./img/hero.jpg);
@@ -225,23 +236,14 @@ html {
     #414345,
     #232526
   ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #414345, #232526);
 }
-.borderless {
-  border-left: none;
-  border-top: none;
-  border-right: none;
-}
+
 input,
 textarea {
   background: transparent !important;
-  border-bottom: 4px solid #bab2b2 !important;
+  border: 2px solid #bab2b2 !important;
+  border-radius: 40px !important;
   box-shadow: none !important;
   color: black !important;
 }
@@ -349,12 +351,10 @@ textarea {
 #sub-menu {
   display: none;
 }
-
 .wave-img {
   position: absolute;
   bottom: 0;
 }
-
 .cor-img {
   height: 70vh;
   background-color: rgb(31, 31, 31);
@@ -523,7 +523,7 @@ textarea {
   .hero {
     position: relative;
     margin-top: -100px;
-    z-index: -1;
+    /* z-index: -1; */
     height: calc(90vh + 100px);
     width: 100%;
     background-image: url(./img/hero.jpg);

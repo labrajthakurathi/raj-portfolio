@@ -19,7 +19,7 @@ export default class Landing extends Component {
               </h4>
             </div>
             <a href="./#films" className="btn btn-info  mt-3">
-              See My Work
+              See My Works
             </a>
           </div>
           <img src={Wave} className="wave-img" />
