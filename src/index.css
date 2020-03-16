@@ -14,8 +14,8 @@ html {
   justify-content: center;
   align-items: center;
   opacity: 1;
-  transition: 1s all ease-in-out;
-  animation: fade 3s ease-in-out;
+  transition: 3s all ease-in-out;
+  animation: fade 3.5s ease-in-out;
 }
 @keyframes fade {
   0% {
@@ -54,7 +54,7 @@ html {
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 1;
+  z-index: 3;
   -webkit-user-select: none;
   user-select: none;
   padding: 13px;
@@ -67,10 +67,11 @@ html {
   height: 32px;
   position: absolute;
   top: -7px;
-  left: -5px;
+  left: 7px;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
+  background-color: red;
   -webkit-touch-callout: none;
 }
 
@@ -80,7 +81,7 @@ html {
   height: 3px;
   background: #b1b0b0;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 4;
   margin-bottom: 5px;
   transition: all 400ms ease-in-out;
 }
@@ -134,9 +135,10 @@ html {
 #menu li {
   padding: 10px 0;
   font-size: 1.1rem;
-
+  z-index: 4;
   opacity: 0.6;
   color: white;
+  -webkit-text-fill-color: white;
 }
 
 #menuToggle input:checked ~ #menu {
@@ -156,9 +158,9 @@ html {
   text-decoration: none;
 }
 .logo-wrapper {
-  width: 100%;
+  width: 70%;
   position: relative;
-  z-index: 9;
+  z-index: 2;
   text-align: center;
   margin: auto;
   padding-top: 10px;
@@ -187,6 +189,13 @@ html {
   width: 100%;
   background-image: url(./img/hero.jpg);
   background-size: cover;
+  -webkit-background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
 }
 .films {
@@ -195,7 +204,7 @@ html {
 }
 .hero-text {
   color: white;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 .hero-text h4 {
   line-height: 1.4em;
@@ -368,7 +377,9 @@ textarea {
   background-color: rgb(31, 30, 30) !important;
   overflow: hidden;
 }
-
+.bg-footer {
+  background-color: rgb(52, 52, 52);
+}
 @media only screen and (min-width: 720px) {
   #menuToggle span {
     all: unset !important;
@@ -436,6 +447,7 @@ textarea {
     font-size: 0.9rem;
     font-weight: bold;
     color: white;
+    -webkit-text-fill-color: white;
   }
   .logo {
     margin: auto;
@@ -528,8 +540,10 @@ textarea {
     width: 100%;
     background-image: url(./img/hero.jpg);
     background-size: cover;
-    background-attachment: fixed;
+
+    background-size: 100vmax 100vmax;
   }
+
   .overlay {
     height: calc(90vh + 100px);
     width: 100%;
@@ -539,5 +553,17 @@ textarea {
     flex-direction: column;
     align-items: center;
     padding: 15%;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  .hero {
+    position: relative;
+    margin-top: -100px;
+    /* z-index: -1; */
+    height: calc(90vh + 100px);
+    width: 100%;
+    background-image: url(./img/hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
   }
 }

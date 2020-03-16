@@ -10,13 +10,18 @@ export default class Landing extends Component {
         <div className="hero ">
           <div className="overlay ">
             {" "}
-            <div className="hero-text ">
+            <div className="hero-text text-center">
               <h4>
                 <strong>
                   JUST ANOTHER WRITTER - DIRECTOR, BUT THIS ONE BREATHE
                   CREATIVITY, lol.
                 </strong>
               </h4>
+              <lead>
+                {" "}
+                I create stories and films that transgress cultures, borders and
+                explore what it means to be human beings
+              </lead>
             </div>
             <a href="./#films" className="btn btn-info  mt-3">
               See My Works

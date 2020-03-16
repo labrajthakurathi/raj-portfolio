@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="bg-dark text-muted container-fluid pt-3 pb-2">
+    <div className="bg-footer text-muted container-fluid pt-3 pb-2">
       <p className=" text-center">Find me on </p>
       <div className="row fab-container mx-auto">
         <div className="col text-center">
